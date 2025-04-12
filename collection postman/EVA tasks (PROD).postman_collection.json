@@ -7,13 +7,13 @@
   },
   "item": [
     {
-      "name": "adiciona usuario",
+      "name": "Adicionar usuário",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"username\": \"leonardo-ferreira10\",\r\n    \"email\": \"leonardo@ticarreiras10.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+          "raw": "{\r\n    \"username\": \"leonardo\",\r\n    \"email\": \"leonardo@leonardo.com\",\r\n    \"password\": \"123456\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -23,20 +23,20 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/users/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["users", ""]
         }
       },
       "response": []
     },
     {
-      "name": "gera token",
+      "name": "Gerar token",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"username\": \"leonardo-ferreira\",\r\n    \"password\": \"123456\"\r\n}",
+          "raw": "{\r\n    \"username\": \"leonardo\",\r\n    \"password\": \"123456\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -46,14 +46,14 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/auth/token/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["auth", "token", ""]
         }
       },
       "response": []
     },
     {
-      "name": "adiciona task",
+      "name": "Adicionar tarefa",
       "request": {
         "auth": {
           "type": "bearer",
@@ -79,14 +79,14 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["tasks", ""]
         }
       },
       "response": []
     },
     {
-      "name": "altera task",
+      "name": "Alterar tarefa",
       "request": {
         "auth": {
           "type": "bearer",
@@ -112,14 +112,14 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/2/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["tasks", "2", ""]
         }
       },
       "response": []
     },
     {
-      "name": "altera usuario",
+      "name": "Alterar usuário",
       "request": {
         "auth": {
           "type": "bearer",
@@ -143,7 +143,7 @@
           }
         },
         "url": {
-          "raw": "http://127.0.0.1:8000/users/1/",
+          "raw": "https://44.206.246.29.nip.io/users/1/",
           "protocol": "http",
           "host": ["127", "0", "0", "1"],
           "port": "8000",
@@ -153,7 +153,7 @@
       "response": []
     },
     {
-      "name": "remove task",
+      "name": "Remover tarefa",
       "request": {
         "auth": {
           "type": "bearer",
@@ -170,14 +170,14 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/3/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["tasks", "3", ""]
         }
       },
       "response": []
     },
     {
-      "name": "remove usuario",
+      "name": "Remover usuário",
       "request": {
         "auth": {
           "type": "bearer",
@@ -194,14 +194,14 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/users/3/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["users", "3", ""]
         }
       },
       "response": []
     },
     {
-      "name": "lista tarefas - all",
+      "name": "Listar todas as tarefas",
       "request": {
         "auth": {
           "type": "bearer",
@@ -218,14 +218,14 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["tasks", ""]
         }
       },
       "response": []
     },
     {
-      "name": "lista usuarios - all",
+      "name": "Listar todos os usuários",
       "request": {
         "auth": {
           "type": "bearer",
@@ -242,14 +242,14 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/users/",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["users", ""]
         }
       },
       "response": []
     },
     {
-      "name": "lista tarefas - por titulo ou status",
+      "name": "Filtrar tarefas por título ou status",
       "request": {
         "auth": {
           "type": "bearer",
@@ -266,7 +266,7 @@
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/?search=teste eva",
           "protocol": "http",
-          "host": ["52", "204", "158", "5"],
+          "host": ["44", "206", "246", "29", "nip", "io"],
           "path": ["tasks", ""],
           "query": [
             {
