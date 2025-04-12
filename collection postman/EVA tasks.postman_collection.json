@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "a1267f5e-9aed-44df-8e5d-4fd0b9d802cb",
+		"name": "EVA tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41258497"
+	},
+	"item": [
+		{
+			"name": "adiciona usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"almir-ferreira\",\r\n    \"email\": \"almir@ticarreiras.com.br\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gera token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"almir-ferreira\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adiciona task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjQ3NTAzLCJpYXQiOjE3MzcyNDcyMDMsImp0aSI6IjliOGMzMTQyMjk1YzQwOGQ5ZmI5NjQ0NDYwMTMzNzcyIiwidXNlcl9pZCI6MX0.eIIVjechRz6G0C7RIQqwlZjfUGWmeLDMISwZ7jESctE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Realizar Teste EVA\",\r\n  \"description\": \"Criação de um sistema colaborativo para gestão de tarefas\",\r\n  \"responsible\": 1, \r\n  \"status\": \"TODO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "altera task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjUwMzQ4LCJpYXQiOjE3MzcyNTAwNDgsImp0aSI6ImI0Yzk3ZTg4MGJkZTRlZTM5ZThlMDlkMjg3YjlhZDFhIiwidXNlcl9pZCI6Mn0.w3Nm7R9CuVa5YXT3zMViCKkWNR4MKoXBf67uuQX9LQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Nova descrição da tarefa\",\r\n    \"description\": \"Finalizando\",\r\n    \"status\": \"DONE\",\r\n    \"responsible\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "altera usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjUwMzQ4LCJpYXQiOjE3MzcyNTAwNDgsImp0aSI6ImI0Yzk3ZTg4MGJkZTRlZTM5ZThlMDlkMjg3YjlhZDFhIiwidXNlcl9pZCI6Mn0.w3Nm7R9CuVa5YXT3zMViCKkWNR4MKoXBf67uuQX9LQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"novo_email@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjUwMzQ4LCJpYXQiOjE3MzcyNTAwNDgsImp0aSI6ImI0Yzk3ZTg4MGJkZTRlZTM5ZThlMDlkMjg3YjlhZDFhIiwidXNlcl9pZCI6Mn0.w3Nm7R9CuVa5YXT3zMViCKkWNR4MKoXBf67uuQX9LQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjUwNjg1LCJpYXQiOjE3MzcyNTAzODUsImp0aSI6ImMyYzBiMDcwNDRlZDQ2YmU5ZWEyY2ZiODgzZDI2OWQyIiwidXNlcl9pZCI6Mn0.16ohXVQY93LbUmhDm0iMLzsHP3-Yyu2adShoR53VJTk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista tarefas - all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjUwMzQ4LCJpYXQiOjE3MzcyNTAwNDgsImp0aSI6ImI0Yzk3ZTg4MGJkZTRlZTM5ZThlMDlkMjg3YjlhZDFhIiwidXNlcl9pZCI6Mn0.w3Nm7R9CuVa5YXT3zMViCKkWNR4MKoXBf67uuQX9LQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista usuarios - all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjUxMDMzLCJpYXQiOjE3MzcyNTA3MzMsImp0aSI6Ijk4NGIzZjUxYmQ0MjQ2YWI4MjYyMWY1MGJmZTk4NGQ3IiwidXNlcl9pZCI6Mn0.IAbUEZ0Wt3fAICIFAkuL1iokGmtzslQUCoPm6ZwrjXI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista tarefas - por titulo ou status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjUxMzQ4LCJpYXQiOjE3MzcyNTEwNDgsImp0aSI6Ijc5OTBmNjNhZTgzNjRiNTBhZDc1OGRjYmZhMDRlZWM4IiwidXNlcl9pZCI6Mn0.nPj30axwjcYmsYceVHvl6KY238NzPTT2IlypsGMliwA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/?search=teste eva",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "teste eva"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
