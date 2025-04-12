@@ -1,5 +1,6 @@
-from rest_framework import viewsets, filters
+from rest_framework import viewsets, filters, status
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.response import Response
 from .models import User, Task
 from .serializers import UserSerializer, TaskSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
@@ -12,6 +13,16 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
+    http_method_names = ['post']  
+    
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        return Response(
+            {"message": "User created successfully"}, 
+            status=status.HTTP_201_CREATED
+        )
 
 class TaskViewSet(viewsets.ModelViewSet):
     serializer_class = TaskSerializer

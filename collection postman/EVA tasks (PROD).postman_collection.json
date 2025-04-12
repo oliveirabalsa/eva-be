@@ -22,8 +22,8 @@
         },
         "url": {
           "raw": "https://44.206.246.29.nip.io/users/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["users", ""]
         }
       },
@@ -45,8 +45,8 @@
         },
         "url": {
           "raw": "https://44.206.246.29.nip.io/auth/token/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["auth", "token", ""]
         }
       },
@@ -78,8 +78,8 @@
         },
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["tasks", ""]
         }
       },
@@ -111,8 +111,8 @@
         },
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/2/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["tasks", "2", ""]
         }
       },
@@ -144,9 +144,8 @@
         },
         "url": {
           "raw": "https://44.206.246.29.nip.io/users/1/",
-          "protocol": "http",
-          "host": ["127", "0", "0", "1"],
-          "port": "8000",
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["users", "1", ""]
         }
       },
@@ -169,8 +168,8 @@
         "header": [],
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/3/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["tasks", "3", ""]
         }
       },
@@ -193,8 +192,8 @@
         "header": [],
         "url": {
           "raw": "https://44.206.246.29.nip.io/users/3/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["users", "3", ""]
         }
       },
@@ -217,8 +216,8 @@
         "header": [],
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["tasks", ""]
         }
       },
@@ -241,8 +240,8 @@
         "header": [],
         "url": {
           "raw": "https://44.206.246.29.nip.io/users/",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["users", ""]
         }
       },
@@ -265,8 +264,8 @@
         "header": [],
         "url": {
           "raw": "https://44.206.246.29.nip.io/tasks/?search=teste eva",
-          "protocol": "http",
-          "host": ["44", "206", "246", "29", "nip", "io"],
+          "protocol": "https",
+          "host": ["44.206.246.29.nip.io"],
           "path": ["tasks", ""],
           "query": [
             {
