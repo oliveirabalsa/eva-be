@@ -3,3 +3,4 @@ djangorestframework
 djangorestframework-simplejwt
 djoser
 django-cors-headers
+gunicorn==21.2.0
