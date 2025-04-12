@@ -21,7 +21,7 @@
           }
         },
         "url": {
-          "raw": "http://52.204.158.5/users/",
+          "raw": "https://44.206.246.29.nip.io/users/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["users", ""]
@@ -44,7 +44,7 @@
           }
         },
         "url": {
-          "raw": "http://52.204.158.5/auth/token/",
+          "raw": "https://44.206.246.29.nip.io/auth/token/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["auth", "token", ""]
@@ -77,7 +77,7 @@
           }
         },
         "url": {
-          "raw": "http://52.204.158.5/tasks/",
+          "raw": "https://44.206.246.29.nip.io/tasks/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["tasks", ""]
@@ -110,7 +110,7 @@
           }
         },
         "url": {
-          "raw": "http://52.204.158.5/tasks/2/",
+          "raw": "https://44.206.246.29.nip.io/tasks/2/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["tasks", "2", ""]
@@ -168,7 +168,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://52.204.158.5/tasks/3/",
+          "raw": "https://44.206.246.29.nip.io/tasks/3/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["tasks", "3", ""]
@@ -192,7 +192,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://52.204.158.5/users/3/",
+          "raw": "https://44.206.246.29.nip.io/users/3/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["users", "3", ""]
@@ -216,7 +216,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://52.204.158.5/tasks/",
+          "raw": "https://44.206.246.29.nip.io/tasks/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["tasks", ""]
@@ -240,7 +240,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://52.204.158.5/users/",
+          "raw": "https://44.206.246.29.nip.io/users/",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["users", ""]
@@ -264,7 +264,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://52.204.158.5/tasks/?search=teste eva",
+          "raw": "https://44.206.246.29.nip.io/tasks/?search=teste eva",
           "protocol": "http",
           "host": ["52", "204", "158", "5"],
           "path": ["tasks", ""],
