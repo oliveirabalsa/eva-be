@@ -1,67 +1,117 @@
-# EVA - Plataforma de Gestão de Tarefas Colaborativa
+# EVA - Backend da Plataforma de Gestão de Tarefas
 
-EVA é uma aplicação web para gestão de tarefas colaborativa, desenvolvida com Django no backend e SQLite como banco de dados. A aplicação permite gerenciar tarefas com autenticação JWT, incluindo criação, leitura, atualização e exclusão de tarefas.
+## 📋 Visão Geral
+
+Este repositório contém o código-fonte do backend da aplicação EVA, uma API REST desenvolvida com Django para suportar a plataforma de gestão de tarefas. O backend fornece endpoints para autenticação, gerenciamento de usuários e operações CRUD de tarefas.
 
 ## 🚀 Funcionalidades
 
-- **Autenticação de Usuários**: Login e registro com autenticação JWT.
-- **Gestão de Tarefas**:
-  - Criar novas tarefas.
-  - Listar tarefas existentes com título, descrição, status e responsável.
-  - Atualizar tarefas.
-  - Excluir tarefas.
-- **Busca**: Pesquise tarefas por título ou status.
-- **Responsividade**: Interface amigável e responsiva.
-
----
+- **Autenticação Segura**:
+  - Autenticação baseada em JWT (JSON Web Token)
+  - Endpoints para registro, login e refresh de token
+- **Gerenciamento de Usuários**:
+  - Cadastro de novos usuários
+  - Perfis de usuário
+- **API RESTful para Tarefas**:
+  - Criação de tarefas
+  - Listagem de tarefas com filtros
+  - Atualização de tarefas (título, descrição, status)
+  - Exclusão de tarefas
+- **Filtros e Busca**:
+  - Busca por título de tarefa
+  - Filtragem por status
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Backend**: Python, Django, Django REST Framework (DRF), Djoser.
-- **Banco de Dados**: SQLite.
-- **Autenticação**: JWT (via Djoser).
-- **Implantação**: Servidor EC2 da AWS.
+- **Python**: Linguagem de programação principal
+- **Django**: Framework web
+- **Django REST Framework**: Toolkit para construção de APIs
+- **Simple JWT**: Autenticação via JWT
+- **Djoser**: Endpoints adicionais de autenticação
+- **SQLite**: Banco de dados
+- **Django CORS Headers**: Configuração de CORS
 
----
+## 📦 Estrutura do Projeto
 
-## 📥 Como Clonar e Rodar o Projeto
+- `myproject/`: Configurações principais do Django
+  - `settings.py`: Configurações do projeto
+  - `urls.py`: Mapeamento de URLs principal
+- `myapp/`: Aplicação principal
+  - `models.py`: Modelos de dados (User, Task)
+  - `serializers.py`: Serialização de dados
+  - `views.py`: Viewsets da API
+  - `urls.py`: Rotas da API
+- `manage.py`: Script de gerenciamento do Django
+- `requirements.txt`: Dependências do projeto
 
-### 1. Clone o Repositório
-Use o comando abaixo para clonar o repositório:
-```bash
-git clone https://github.com/almir-ticarreiras/eva.git
+## 🚀 Como Executar o Projeto
 
-Entre no diretório do projeto:
-```bash
-cd eva
+1. **Clone o repositório**:
 
-### 2. Crie e Ative um Ambiente Virtual
-Use o comando abaixo para criar o ambiente virtual:
-```bash
-python3 -m venv venv
+   ```bash
+   git clone https://github.com/oliveirabalsa/eva-be.git
+   cd eva-be
+   ```
 
-Use o comando abaixo para ativar o ambiente virtual:
-```bash
-source venv/bin/activate
+2. **Crie e ative um ambiente virtual**:
 
-### 3. Instale as Dependências
-Com o ambiente virtual ativo, instale as dependências listadas no arquivo requirements.txt usando o comando abaixo:
-```bash
-pip install -r requirements.txt
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # No Windows: venv\Scripts\activate
+   ```
 
-### 4. Configure o Banco de Dados
-Use o comando abaixo para criar as migrações do banco de dados:
-```bash
-python3 manage.py makemigrations
-python3 manage.py migrate
+3. **Instale as dependências**:
 
-### 5. Inicie o Servidor de Desenvolvimento
-Execute o servidor de desenvolvimento, através do seguinte comando:
-```bash
-python3 manage.py runserver
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## A aplicação estará acessível no endereço: http://localhost:8000
+4. **Execute as migrações do banco de dados**:
 
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
 
+5. **Crie um superusuário (opcional)**:
 
+   ```bash
+   python manage.py createsuperuser
+   ```
 
+6. **Inicie o servidor de desenvolvimento**:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+7. **Acesse a API**:
+   - A API estará disponível em: http://127.0.0.1:8000/
+   - Admin do Django: http://127.0.0.1:8000/admin/
+
+## 📡 Endpoints da API
+
+- **Autenticação**:
+
+  - `POST /auth/token/`: Obter token JWT
+  - `POST /auth/token/refresh/`: Atualizar token JWT
+  - `POST /users/`: Registrar novo usuário
+
+- **Tarefas**:
+  - `GET /tasks/`: Listar todas as tarefas
+  - `POST /tasks/`: Criar nova tarefa
+  - `GET /tasks/{id}/`: Detalhes de uma tarefa
+  - `PUT /tasks/{id}/`: Atualizar uma tarefa
+  - `DELETE /tasks/{id}/`: Excluir uma tarefa
+
+## 🔧 Integração com o Frontend
+
+Este backend foi projetado para funcionar com o frontend React da aplicação EVA. Para configurar a integração, certifique-se de que:
+
+1. O frontend está configurado para acessar a URL correta da API
+2. CORS está configurado corretamente no backend
+3. As requisições do frontend incluem os tokens JWT necessários para autenticação
+
+## 📝 Licença
+
+Este projeto está licenciado sob a licença MIT.
