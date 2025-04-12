@@ -18,6 +18,9 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = '__all__' 
         read_only_fields = ('created_at', 'updated_at')  # Exemplo: Tornar campos somente leitura
+        extra_kwargs = {
+            'responsible': {'required': False}
+        }
 
     def create(self, validated_data):
         # Personalizar a criação da tarefa (opcional)

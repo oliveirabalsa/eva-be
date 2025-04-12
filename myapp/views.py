@@ -14,11 +14,25 @@ class UserViewSet(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
 
 class TaskViewSet(viewsets.ModelViewSet):
-    queryset = Task.objects.all()
     serializer_class = TaskSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'status']
     permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        """
+        This view returns a list of all tasks
+        for the currently authenticated user.
+        """
+        user = self.request.user
+        return Task.objects.filter(responsible=user)
+
+    def perform_create(self, serializer):
+        """
+        Set the responsible user to the current user when creating a task
+        """
+        # Explicitly set the responsible to the current user
+        serializer.save(responsible=self.request.user)
 
     def update(self, request, *args, **kwargs):
         # Lógica para atualizar a tarefa
